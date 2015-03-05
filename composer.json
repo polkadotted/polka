@@ -1,0 +1,20 @@
+{
+    "name": "polkadotted/polka",
+    "description": "Dotfile management on OSX.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank McCoy",
+            "email": "frankmccoy.d@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/finder": "~3.0@dev",
+        "symfony/filesystem": "~3.0@dev",
+        "symfony/console": "~3.0@dev"
+    },
+    "autoload": {
+        "psr-0": {"Polka": "src/"}
+    }
+}
