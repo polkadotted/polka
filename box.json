@@ -4,17 +4,18 @@
 		"src"
 	],
 	"files": [
-		"LICENSE"
+		"LICENSE",
+		"vendor/herrera-io/phar-update/res/schema.json"
 	],
 	"finder": [
 		{
 			"name": "*.php",
-			"exclude": ["Tests"],
+			"exclude": ["Tests", "tests"],
 			"in": "vendor"
 		}
 	],
 	"git-version": "package_version",
 	"main": "bin/polka",
-	"output": "dist/polka.phar",
+	"output": "dist/polka-@git-version@.phar",
 	"stub": true
 }

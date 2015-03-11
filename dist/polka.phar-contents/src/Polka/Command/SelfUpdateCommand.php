@@ -26,17 +26,7 @@ class SelfUpdateCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln('Checking for updates...');
-
-        try {
-          $manager = new Manager(Manifest::loadFile(self::MANIFEST_FILE));
-        } catch (FileException $e) {
-          $output->writeln('<error>Unable to search for updates</error>');
-          return 1;
-        }
-
-        
-
+        $manager = new Manager(Manifest::loadFile(self::MANIFEST_FILE));
         $manager->update($this->getApplication()->getVersion(), true);
     }
 }
